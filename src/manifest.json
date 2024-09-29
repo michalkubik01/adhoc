@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "ADHOC - ADHD Helper (indev)",
+  "version": "1.0",
+  "description": "ADHOC - ADHD Helper (indev)",
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["contentScript.bundle.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "icons": {
+    "48": "adhoc.png"
+  },
+  "action": {
+    "default_icon": {
+      "48": "adhoc.png"
+    },
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "background.bundle.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["contentScript.bundle.js"],
+      "matches": ["*://*.youtube.com/*"]
+    },
+    {
+      "resources": ["background.bundle.js"],
+      "matches": ["*://*.youtube.com/*"]
+    },
+    { "resources": ["manifest.json"], "matches": ["*://*.youtube.com/*"] },
+    { "resources": ["adhoc.png"], "matches": ["*://*.youtube.com/*"] }
+  ]
+}

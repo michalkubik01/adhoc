@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar UI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Sidebar Container -->
+    <div class="sidebar">
+      <!-- Noice Button -->
+      <button class="sidebar-button">
+        <img
+          src="icons/noice.png"
+          data-hover="icons/noice-hover.png"
+          alt="noice"
+          class="icon"
+        />
+      </button>
+
+      <!-- Additional Buttons (Unchanged) -->
+      <button class="sidebar-button" id="trackerButton">
+        <img
+          src="icons/tracker.png"
+          data-hover="icons/tracker-hover.png"
+          alt="tracker"
+          class="icon"
+        />
+      </button>
+      <button class="sidebar-button">
+        <img
+          src="icons/timer.png"
+          data-hover="icons/timer-hover.png"
+          alt="timer"
+          class="icon"
+        />
+      </button>
+      <button class="sidebar-button">
+        <img
+          src="icons/games.png"
+          data-hover="icons/games-hover.png"
+          alt="games"
+          class="icon"
+        />
+      </button>
+      <button class="sidebar-button">
+        <img
+          src="icons/settings.png"
+          data-hover="icons/settings-hover.png"
+          alt="settings"
+          class="icon"
+        />
+      </button>
+    </div>
+
+    <!-- Noice Panel (Ensure this is outside the sidebar div) -->
+    <div class="noice-panel" id="noicePanel">
+      <div class="noice-popup-header">
+        <span id="closeNoice" class="close-noice-button">&times;</span>
+      </div>
+      <div class="noice-content">
+        <div class="play-controls">
+          <button class="play-button">&#9658;</button>
+          <!-- Play Button -->
+          <div class="waveform"></div>
+          <!-- Placeholder for waveform -->
+        </div>
+        <div class="volume-controls">
+          <button class="volume-button">&#128266;</button>
+          <input
+            type="range"
+            class="volume-slider"
+            min="0"
+            max="100"
+            value="50"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="noicePanel.bundle.js"></script>
+    <script src="hover.bundle.js"></script>
+  </body>
+</html>
