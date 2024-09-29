@@ -17,9 +17,9 @@ yarn install
 
 3. Configure environment variable - OPENAI_API_KEY (use your own)
 
-Build code
+4. Build code
 ```bash
 yarn build
 ```
 
-4. Install /dist folder into Chrome browser
+5. Install /dist folder into Chrome browser extensions
